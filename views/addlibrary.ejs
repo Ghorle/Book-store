@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h1>ADD NEW LIBRARY</h1>
+      <% if (messages) { %>
+      <p><%= messages.error %></p>
+      <% } %>
+      <form action="/addlibrary" method="POST">
+        <input type="text" name="name" placeholder="Library Name" />
+        <input type="text" name="author" placeholder="Author Name" />
+        <input type="time" name="opening_time" placeholder="Opening Time" />
+        <input type="time" name="closing_time" placeholder="Closing Time" />
+        <button>ADD NEW LIBRARY</button>
+        <div><h3><button><a class="button" href="/index"><i class="fa fa-home"></i> Home</a></button></h3></div>
+      </form>
+    </div>
+  </body>
+</html>

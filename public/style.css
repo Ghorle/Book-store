@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100;400;500;600;700&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #6a5acd;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Encode Sans SC", sans-serif;
+}
+
+.main {
+  width: 500px;
+  max-width: 90%;
+  text-align: center;
+  background-color: white;
+  padding: 25px 20px;
+  border-radius: 10px;
+}
+
+.main > h1 {
+  font-size: 30px;
+  color: rgb(26, 25, 25);
+  margin: 0 0 30px 0;
+}
+
+.main > form > input {
+  width: 95%;
+  padding: 15px;
+  background-color: #ccc;
+  color: gray;
+  border: 0;
+  margin: 10px 5px;
+  border-radius: 8px;
+}
+
+.main > form > button {
+  background-color: #6a5acd;
+  padding: 15px;
+  width: 95%;
+  border: none;
+  color: white;
+  margin-top: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+* {box-sizing: border-box}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: white;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+  width: 25%; 
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: blue;
+}
+
+.navbar a.active {
+  background-color: #04AA6D;
+}
+
+@media screen and (max-width: 40px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 60%;
+    text-align: left;
+  }
+}
+
+.btn-group button {
+  background-color: #04AA6D; 
+  border: 1px solid green; 
+  color: white; 
+  padding: 10px 24px;
+  cursor: pointer; 
+  float: left; 
+}
+
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none;
+}
+
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  
+  color: white;
+  padding: 15px 195px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+select {
+
+  
+  background-color: rgb(182, 171, 171);
+  border: thin solid blue;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+
+
+  margin: 0;      
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+
+select.round {
+  background-image:
+    linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    radial-gradient(#ddd 70%, transparent 72%);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - .5em) .5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1.5em 1.5em;
+  background-repeat: no-repeat;
+}
+
+select.round:focus {
+  background-image:
+    linear-gradient(45deg, white 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, white 50%),
+    radial-gradient(gray 70%, transparent 72%);
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    calc(100% - .5em) .5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1.5em 1.5em;
+  background-repeat: no-repeat;
+  border-color: green;
+  outline: 0;
+}
+.btn {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #6a5acd;
+}
+
+#libraries {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#libraries td, #libraries th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#libraries tr:nth-child(n){background-color: rgb(132, 216, 132);}
+
+#libraries tr:hover {background-color: #ddd;}
+
+#libraries th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: white;
+  color: blue;
+}
+
+
+
+
+.main > form > input:focus,
+.main > form > button:focus {
+  outline: none;
+}

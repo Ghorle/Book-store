@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books Library</title>
+    <link rel="stylesheet" href="/style.css" />
+    
+  </head>
+  <body>
+    <table id="libraries">
+      <thead>
+        <tr>
+          <th scope="col">Sr. No.</th>
+          <th scope="col">Name</th>
+          <th scope="col">Author</th>
+          <th scope="col">Opened</th>
+          <th scope="col">Closed</th>
+          <th> Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if(data.length){
+       
+        for(var i = 0; i< data.length; i++) {%>  
+        <tr>
+          <th scope="row"><%= (i+1) %></th>
+          <td><%= data[i].name%></td>
+          <td><%= data[i].author%></td>
+          <td><%= data[i].opening_time%></td>
+          <td><%= data[i].closing_time%></td>
+          <td>
+            <a href="/deletelib/<%= data[i]._id%>"><i class="fa fa-trash" aria-hidden="true" style='font-size:24px;color:black'></i></a>
+          </td>
+        </tr>
+        <% }
+                 
+         }else{ %>
+             <tr>
+                <td colspan="3">No user</td>
+             </tr>
+          <% } %>    
+        
+      </tbody>
+      </table>
+      <h3><button><a class="button" href="/index"><i class="fa fa-home"></i> Home</a></button></h3>
+</body>
+</html>
+
