@@ -194,7 +194,7 @@ select.round:focus {
 #libraries {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 90%;
 }
 
 #libraries td, #libraries th {
