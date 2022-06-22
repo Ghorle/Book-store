@@ -56,6 +56,7 @@ app.get('/liblist', (req, res) => {
       
   Library.find((err, docs) => {
       if (!err) {
+          res.status(200)
           res.render("liblist", {
               data: docs
           });
@@ -98,7 +99,8 @@ app.post("/addbook", async (req, res) => {
         const book = new Book({ title, published_at, library, language });
         const bookRegister = await book.save();
           if (bookRegister)
-          { res.render("index") }
+          { res.status(201)
+            res.render("index") }
      } catch (err) {
         console.log(err);  
      }
