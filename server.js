@@ -153,9 +153,7 @@ app.get('/deletelib/:id', (req, res) => {
   });
 });
 
-
 const Port = 7000;
-
 
 mongoose
   .connect("mongodb://localhost:27017/Login", {
