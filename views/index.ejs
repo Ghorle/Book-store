@@ -4,11 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Books Library</title>
+    <title>Index</title>
     <link rel="stylesheet" href="/style.css" />
     
   </head>
   <body>
+    <h1>Dashboard</h1>
+    <% if(success !='') { %>
+      <div class="alert alert-success">
+        <strong>Success!</strong> <%= success %>
+      </div>
+      <%}%>
     <div class="navbar">
       <a href="/addbook">Add Book</a>
       <a href="/booklist">View Books</a>

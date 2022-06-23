@@ -10,9 +10,7 @@
   <body>
     <div class="main">
       <h1>ADD NEW LIBRARY</h1>
-      <% if (messages) { %>
-      <p><%= messages.error %></p>
-      <% } %>
+
       <form action="/addlibrary" method="POST">
         <input type="text" name="name" placeholder="Library Name" />
         <input type="text" name="author" placeholder="Author Name" />

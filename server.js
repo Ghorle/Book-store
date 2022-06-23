@@ -1,7 +1,6 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-const flash = require("express-flash");
 const session = require("express-session");
 const methodOverride = require("method-override");
 const Book = require("./models/book");
@@ -13,7 +12,6 @@ const app = express();
 
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
-app.use(flash());
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
@@ -30,7 +28,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/index", (req, res) => {
-  res.render("index");
+  res.render("index", {success: ''});
 });
 
 
@@ -99,8 +97,8 @@ app.post("/addbook", async (req, res) => {
         const book = new Book({ title, published_at, library, language });
         const bookRegister = await book.save();
           if (bookRegister)
-          { res.status(201)
-            res.render("index") }
+          { 
+            res.render("index",{ success: 'Book Added Successfully!!!'}) }
      } catch (err) {
         console.log(err);  
      }
@@ -122,7 +120,7 @@ app.post("/addlibrary", async (req, res) => {
         const library = new Library({ name, author, opening_time, closing_time });
         const libraryRegister = await library.save();
           if (libraryRegister)
-          { res.render("index") }
+          { res.render("index",{ success: 'Library Added Successfully!!!'}) }
      } catch (err) {
         console.log(err);  
      }
